@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <title>Sistema Bancario</title>
+  <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+<!-- Login -->
+<div id="login" class="container">
+  <h2>Inicio de Sesión</h2>
+  <input type="text" id="identificacion" placeholder="Número de Identificación" autocomplete="username" />
+  <input type="password" id="password" placeholder="Contraseña" autocomplete="current-password" />
+  <button id="loginBtn">Iniciar Sesión</button>
+  <button id="showRegisterBtn">Registrar Nuevo Usuario</button>
+  <p id="loginMessage" class="message"></p>
+</div>
+
+<!-- Registro -->
+<div id="registerForm" class="container hidden">
+  <h2>Registrar Nuevo Usuario</h2>
+  <input type="text" id="regNombre" placeholder="Nombre" autocomplete="name" />
+  <input type="text" id="regApellido" placeholder="Apellido" autocomplete="family-name"/>
+  <input type="text" id="regDireccion" placeholder="Dirección" autocomplete="street-address"/>
+  <input type="text" id="regIdentificacion" placeholder="Número de Identificación" autocomplete="username"/>
+  <input type="password" id="regPassword" placeholder="Contraseña" autocomplete="new-password"/>
+  <select id="regTipoCuenta">
+    <option value="" disabled selected>Seleccione tipo de cuenta</option>
+    <option value="1">Cuenta Corriente</option>
+    <option value="2">Cuenta de Ahorros</option>
+  </select>
+  <button id="registerBtn">Registrar</button>
+  <button id="cancelRegisterBtn">Cancelar</button>
+  <p id="registerMessage" class="message"></p>
+</div>
+
+<!-- Cajero -->
+<div id="cajero" class="container hidden">
+  <h2>Menú Principal</h2>
+  <button id="consignarBtn">Consignar</button>
+  <button id="retirarBtn">Retirar</button>
+  <button id="transferirBtn">Transferir a otra cuenta</button>
+  <button id="consultarSaldoBtn">Consultar Saldo</button>
+  <button id="consultarMovimientosBtn">Consultar Movimientos</button>
+  <button id="logoutBtn">Cerrar Sesión</button>
+
+  <div id="operationForm" class="hidden" style="margin-top: 25px; text-align: left;"></div>
+
+  <div id="saldoDisplay"></div>
+
+  <div id="movimientosList" class="hidden"></div>
+</div>
+
+<!-- Popup mensaje -->
+<div id="popupMessage" class="hidden"></div>
+
+<script type="module" src="./js/main.js"></script>
+</body>
+</html>
+
